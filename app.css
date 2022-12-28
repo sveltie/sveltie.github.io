@@ -1,0 +1,433 @@
+:root {
+    /* Nord Polar Night */
+    --polar-night-1: #2e3440;
+    --polar-night-2: #3b4252;
+    --polar-night-3: #434c5e;
+    --polar-night-4: #4c566a;
+
+    /* Nord Snow Storm */
+    --snow-storm-1: #d8dee9;
+    --snow-storm-2: #e5e9f0;
+    --snow-storm-3: #eceff4;
+
+    /* Nord Frost */
+    --frost-1: #8fbcbb;
+    --frost-2: #88c0d0;
+    --frost-3: #81a1c1;
+    --frost-4: #5e81ac;
+
+    /* Nord Aurora */
+    --aurora-1: #bf616a;
+    --aurora-2: #d08770;
+    --aurora-3: #ebcb8b;
+    --aurora-4: #a3be8c;
+    --aurora-5: #b48ead;
+}
+
+html {
+    font-family: "Source Code Pro", monospace;
+    background: var(--polar-night-3);
+}
+
+body {
+    background: var(--polar-night-1);
+    color: var(--snow-storm-1);
+    width: 60%;
+    margin: auto;
+    margin-top: 36px;
+    margin-bottom: 10%;
+    position: relative;
+    border-radius: 0.75rem;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+        rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+@media only screen and (max-width: 960px) {
+    body {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    body {
+        width: 95%;
+        font-size: smaller;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+
+    div.entry-title {
+        margin: 1.5rem;
+    }
+
+    div.entry-title h3 {
+        font-size: small;
+    }
+
+    div.entry-title h2 {
+        font-size: 1.4rem;
+    }
+
+    div.typewriter h2 {
+        font-size: 1.4rem;
+    }
+
+    div.social-media a {
+        font-size: smaller;
+        padding: 0 1rem;
+    }
+
+    nav.nav-bar a {
+        margin: 0 1rem;
+        font-size: smaller;
+    }
+
+    div.entry-color-box {
+        grid-template-columns: 5rem 5rem 5rem 5rem;
+    }
+
+    div.entry-color-box div {
+        margin: 1rem;
+        height: 6rem;
+    }
+
+    div.entry-introduction {
+        margin: 1.5rem;
+    }
+
+    div.contact {
+        margin-top: 2rem;
+        margin-left: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    nav.nav-bar a {
+        margin: 0 0.75rem;
+        font-size: smaller;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: var(--snow-storm-3);
+}
+
+#link {
+    color: var(--aurora-3);
+    cursor: pointer;
+}
+
+#title-highlight {
+    color: var(--aurora-4);
+}
+
+#highlight {
+    color: var(--frost-1);
+}
+
+/*======================NAV-BAR SECTION======================*/
+
+.nav-bar-top {
+    background: var(--polar-night-1);
+    display: flex;
+    justify-content: flex-end;
+    font-size: 2.25rem;
+    border-bottom: solid 1px var(--polar-night-2);
+    border-radius: 0.75rem 0.75rem 0 0;
+}
+
+.nav-bar-top span {
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.nav-bar-top-item-1 {
+    color: var(--aurora-3);
+}
+
+.nav-bar-top-item-2 {
+    color: var(--aurora-4);
+}
+
+.nav-bar-top-item-3 {
+    color: var(--aurora-1);
+}
+
+.nav-bar {
+    background: var(--polar-night-1);
+    display: flex;
+    justify-content: center;
+}
+
+.nav-bar a {
+    margin: 0 1.5rem;
+    padding: 0.25rem 0.5rem;
+    display: block;
+    background-color: var(--polar-night-1);
+    border-radius: 0.75rem;
+    text-align: center;
+    cursor: pointer;
+    transition: ease-in-out 0.5s;
+}
+
+.nav-bar > a:hover {
+    color: var(--aurora-3);
+    transition: ease-in-out 0.5s;
+}
+
+/*===================END OF NAV-BAR SECTION===================*/
+
+/*===================ENTRY SECTION===================*/
+.entry-container {
+    padding-top: 4.5rem;
+    padding-bottom: 0.5rem;
+    background-color: var(--polar-night-1);
+}
+
+.entry {
+    background-color: var(--polar-night-1);
+}
+
+.entry-title {
+    margin: 2.5rem;
+}
+
+.entry-title h2 {
+    font-size: 2.5rem;
+    color: var(--snow-storm-3);
+    text-align: left;
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+}
+
+.entry-title h3 {
+    margin-bottom: 0.5rem;
+}
+
+.typewriter {
+    display: inline-block;
+}
+
+.typewriter h2 {
+    margin: 0.5rem 0;
+    overflow: hidden;
+    border-right: 0.1em solid var(--aurora-3);
+    white-space: nowrap;
+    width: 0;
+    animation: typing 10s steps(40, end) infinite, blink-caret 0.75s infinite;
+    animation-fill-mode: forwards;
+}
+
+@keyframes typing {
+    0% {
+        width: 0%;
+    }
+
+    40% {
+        width: 100%;
+    }
+
+    50% {
+        width: 100%;
+    }
+
+    60% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0%;
+    }
+}
+
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: var(--aurora-3);
+    }
+}
+
+.entry-link:after {
+    content: " >";
+    transition: ease-in-out 0.5s;
+}
+
+.entry-link:hover::after {
+    padding-left: 0.25rem;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+
+.entry-color-box {
+    display: grid;
+    margin-top: 3.5rem;
+    grid-template-columns: 6rem 6rem 6rem 6rem;
+    justify-content: center;
+}
+
+.entry-color-box div {
+    margin: 1.5rem;
+    height: 7rem;
+}
+
+.entry-color-item-1 {
+    background-color: var(--aurora-1);
+    box-shadow: 5px 5px #a6555d;
+}
+
+.entry-color-item-2 {
+    background-color: var(--aurora-2);
+    box-shadow: 5px 5px #b0725f;
+}
+
+.entry-color-item-3 {
+    background-color: var(--aurora-3);
+    box-shadow: 5px 5px #c4aa74;
+}
+
+.entry-color-item-4 {
+    background-color: var(--aurora-4);
+    box-shadow: 5px 5px #81966f;
+}
+
+.entry-color-item-5 {
+    background-color: var(--aurora-5);
+    box-shadow: 5px 5px #91738c;
+}
+
+.entry-color-item-6 {
+    background-color: var(--frost-1);
+    box-shadow: 5px 5px #749998;
+}
+
+.entry-color-item-7 {
+    background-color: var(--frost-2);
+    box-shadow: 5px 5px #72a2b0;
+}
+
+.entry-color-item-8 {
+    background-color: var(--frost-3);
+    box-shadow: 5px 5px #678099;
+}
+
+.entry-introduction {
+    margin: 2.5rem;
+    margin-top: 4.5rem;
+}
+
+.introduction-container {
+    border-left: 3px solid var(--polar-night-3);
+}
+
+.introduction-item {
+    margin: 1.5rem;
+}
+
+.entry-skills {
+    border-left: 3px solid var(--polar-night-3);
+}
+
+.entry-skills-container {
+    margin: 1.25rem;
+}
+
+footer {
+    background-color: var(--polar-night-1);
+    display: flex;
+    justify-content: center;
+    border-radius: 0 0 0.75rem 0.75rem;
+}
+
+.social-media {
+    padding-top: 2rem;
+    margin: 0.5rem;
+    font-size: large;
+}
+
+.social-media a {
+    padding: 0 2rem;
+    transition: ease-in-out 0.5s;
+    cursor: pointer;
+}
+
+.social-media a:hover {
+    color: var(--aurora-3);
+    transition: ease-in-out 0.5s;
+}
+
+/*==========================PROJECT SECTION==========================*/
+
+.project-card {
+    border-left: 5px solid var(--polar-night-3);
+    background-color: #3b4252;
+    border-radius: 0 0.75rem 0.75rem 0;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    margin-bottom: 2rem;
+}
+
+.project-card-item {
+    padding: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: var(--snow-storm-3);
+}
+
+.project-card-item:first-child {
+    padding: 0;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    font-size: small;
+    color: var(--frost-1);
+}
+
+.project-card-item:nth-child(2) {
+    color: var(--snow-storm-3);
+}
+
+.project-card-item:last-child {
+    padding-bottom: 1rem;
+}
+
+.project-card-item h3 {
+    margin: 0;
+}
+
+.project-tag {
+    margin: 0;
+    margin-top: 10px;
+    padding: 0;
+    list-style: none;
+}
+
+.project-tag li {
+    background-color: var(--polar-night-4);
+    display: inline-block;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    border-radius: 1rem;
+}
+
+.project-card-item:last-child a {
+    font-size: larger;
+    margin-right: 1.5rem;
+    cursor: pointer;
+}
+/*========================END OF PROJECT SECTION=====================*/
+
+/*========================CONTACT SECTION=====================*/
+.contact {
+    margin-left: 2.5rem;
+}
+
+.contact-btn {
+    padding: 0.75rem;
+    border: 1px solid var(--aurora-3);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    color: var(--aurora-3);
+}
+
+/*========================END OF CONTACT SECTION=====================*/
